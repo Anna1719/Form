@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="container__form">
+      <h2>Contact Information</h2>
+      <form id="form" novalidate>
+        <!-- Поле FIO -->
+        <div class="form__field">
+          <label class="form__label" for="fio">FIO <span class="required">*</span></label>
+          <input
+          class="form__input"
+            type="text"
+            id="fio"
+            name="fio"
+            placeholder="For Example Doe"
+            required
+            aria-describedby="error-fio"
+          />
+          <span class="status-icon" id="fioStatusIcon"></span>
+          <small id="error-fio" class="error-message"
+            ></small
+          >
+        </div>
+
+        <!-- Поле Пароль -->
+        <div class="form__field">
+          <label class="form__label" for="password">Password <span class="required">*</span></label>
+          <input
+          class="form__input"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter the password"
+            required
+            aria-describedby="error-password"
+          />
+          <span class="status-icon" id="passwordStatusIcon"></span>
+          <small id="error-password" class="error-message"
+            ></small
+          >
+        </div>
+
+        <!-- Кнопка отправки формы -->
+        <button type="submit" class="submit-btn" disabled>Continue</button>
+      </form>
+    </section>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>

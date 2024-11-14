@@ -1,0 +1,124 @@
+/* Общие стили */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container__form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  width: 480px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form__field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.required {
+  color: red;
+}
+
+.status-icon {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  font-size: 18px;
+  display: none;
+}
+
+.error-message {
+  max-width: 400px;
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+  display: none;
+}
+
+.form__input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.3s;
+  background-color: #fdf2e3;
+
+  &:focus {
+    border-color: #e85c41;
+  }
+
+  &.success ~ .status-icon {
+    display: inline-block;
+    color: green;
+    content: "✔";
+  }
+
+  &.error ~ .status-icon {
+    display: inline-block;
+    color: red;
+    content: "✖";
+  }
+
+  &.error ~ .error-message {
+    display: block;
+  }
+
+  &.success {
+    border-color: green;
+  }
+
+  &.error {
+    border-color: red;
+  }
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+}
